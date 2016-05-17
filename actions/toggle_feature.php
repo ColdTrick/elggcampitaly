@@ -3,7 +3,7 @@
 $guid = (int) get_input('guid');
 $entity = get_entity($guid);
 if (!($entity instanceof ElggBlog)) {
-	register_error(elgg_echo(''));
+	register_error(elgg_echo('error:missing_data'));
 	forward(REFERER);
 }
 
